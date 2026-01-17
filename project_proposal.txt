@@ -1,0 +1,37 @@
+Projeto LASCON 2026
+
+Introdução
+
+Calcium Imaging é uma técnica usada em neurociência e biologia celular para visualizar e medir variações de cálcio dentro das células. Quando um neurônio dispara um potencial de ação, canais de cálcio se abrem, fazendo com que cálcio (CA2+) entre rapidamente na célula. Sendo assim, uma pergunta natural seria como mediar a atividade de um neurônio através das variações de cálcio.
+
+Uma das técnicas utilizadas para mediar a atividade neuronal (ou seja, identificar os instantes de disparos de um neurônio) a partir dos dados obtidos, é através dos métodos do tipo “Detrend Ca image”, que se propõe a remover as flutuações lentas do sinal de florescência, preservando apenas as flutuações rápidas, que podem estar relacionadas à instantes de disparo.
+
+1) Reproduzindo Calcium Imaging (CI) em modelos computacionais.
+
+1)a) Implementando modelos neuronais
+
+O primeiro passo do nosso projeto é reproduzir a coleta de dados através do Calcium Imaging em um modelo neuronal. Podemos utilizar os seguintes modelos:
+
+-Bahl 2012: https://modeldb.science/146026
+- O segundo eu não tenho a referência
+
+Esses são modelos compartimentalizados de um único neurônio. A evolução temporal de cálcio é modelada por estes modelos
+
+1)b) Reproduzindo a coleta de dados
+
+Tendo implementado tais modelos, precisamos replicar a coleta de dados pelo CI. Para cada parte do neurônio podemos calcular a equação de variação do neurônio (pesquise por gcamp6f fluorescence eq). Com tais valores, ainda precisamos entender como exatamente devemos transformar as variações de fluorescência obtidas no conteúdo gerado pelo método CI.
+
+1)c) Aplicando as técnicas “Detrend Ca image” para os dados do modelo
+
+Agora, gostaríamos de aplicar algumas técnicas de detrend para os dados simulados. Podemos tentar fazer isso para os 2 ou 3 métodos mais comuns. O desafio aqui é computacional - aplicar estas técnicas de detrend costumam demorar.
+
+2) Propondo e testando um novo método
+
+Por fim, o ideal seria que tentássemos propor um novo método para identificar a atividade através do CI. Com o método proposto, basta seguirmos o mesmo caminho descrito acima - testamos o método em dados simulados e esperamos que o desempenho seja melhor ou equivalente. Depois disso, podemos aplicar o método nos dados reais e (talvez) comparar os resultados obtidos com outros métodos.
+
+3) Possibilidades de extensão
+
+Uma possibilidade de extensão é considerar modelos computacionais de redes de neurônios (simuladas pelo NEST, por exemplo).
+
+
+
